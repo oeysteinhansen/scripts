@@ -50,3 +50,7 @@ apt-get install -y python3.10-full
 ufw enable
 apt-get install -y gufw
 
+# Configure Gnome favorite apps Layout
+gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.Terminal.desktop']"
+
+
