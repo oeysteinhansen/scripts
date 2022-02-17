@@ -11,6 +11,6 @@ wget -O - https://raw.githubusercontent.com/oeysteinhansen/scripts/main/dev.sh |
 Download first, edit, then execute.
 ```
 wget -O - https://raw.githubusercontent.com/oeysteinhansen/scripts/main/dev.sh
-nano
+nano dev.sh
 sudo bash dev.sh
 ```
