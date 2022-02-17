@@ -23,6 +23,7 @@ snap install google-cloud-sdk --classic
 snap install postman
 snap install brave
 snap install gimp
+snap install node --classic
 
 # Install Google Crome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
