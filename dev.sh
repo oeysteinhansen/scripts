@@ -22,6 +22,12 @@ snap install code --classic
 snap install google-cloud-sdk --classic
 snap install postman
 snap install brave
+snap install gimp
+
+# Install Google Crome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+apt-get install -y ./google-chrome-stable_current_amd64.deb
+rm ./google-chrome-stable_current_amd64.deb
 
 # Remove unvanted Snap's
 snap remove firefox
@@ -36,8 +42,11 @@ python3 -m pip install --upgrade pipenv
 
 # Add Python 3.10
 apt-get install -y software-properties-common
-add-apt-repository ppa:deadsnakes/ppa 
+add-apt-repository -y ppa:deadsnakes/ppa 
 apt-get update
 apt-get install -y python3.10-full
 
+# Enable firewall and install firewall tool.
+ufw enable
+apt-get install -y gufw
 
