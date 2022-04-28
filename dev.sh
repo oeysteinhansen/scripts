@@ -1,5 +1,5 @@
 #!/bin/bash
-# Ubuntu development setup script (Ubuntu 21.10)
+# Ubuntu development setup script (Ubuntu 22.04)
 # Author : Øystein Hansen
 
 # Requere the script to run as root
