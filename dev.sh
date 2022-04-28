@@ -37,11 +37,11 @@ snap remove firefox
 apt-get install -y docker.io
 
 # Install and update system vide Python
-#apt install -y python3-pip pipenv
-#python3 -m pip install --upgrade pip
-#python3 -m pip install --upgrade pipenv
+apt-get -y install pipenv
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade pipenv
 
-# Add Python 3.10
+# Add Python 3.10 - Default on Ubuntu 22.04 LTS
 #apt-get install -y software-properties-common
 #add-apt-repository -y ppa:deadsnakes/ppa 
 #apt-get update
