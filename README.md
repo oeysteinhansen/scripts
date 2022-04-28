@@ -15,4 +15,8 @@ nano dev.sh
 sudo bash dev.sh
 ```
 Note Workaround for pipenv on Ubuntu 2204.
-Set the environment variable ```SETUPTOOLS_USE_DISTUTILS=stdlib``` when running pipenv.
+Set the environment variable. 
+```
+export SETUPTOOLS_USE_DISTUTILS=stdlib
+``` 
+when running pipenv.
