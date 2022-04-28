@@ -47,6 +47,9 @@ apt-get install -y docker.io
 #apt-get update
 #apt-get install -y python3.10-full
 
+# Install Pipenv
+apt-get -y install pipenv
+
 # Enable firewall and install firewall tool.
 ufw enable
 apt-get install -y gufw
