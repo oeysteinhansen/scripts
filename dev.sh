@@ -50,8 +50,3 @@ python3 -m pip install --upgrade pipenv
 # Enable firewall and install firewall tool.
 ufw enable
 apt-get install -y gufw
-
-# Configure Gnome favorite apps Layout
-gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.Terminal.desktop']"
-
-
