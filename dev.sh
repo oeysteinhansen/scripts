@@ -37,15 +37,15 @@ snap remove firefox
 apt-get install -y docker.io
 
 # Install and update system vide Python
-apt install -y python3-pip pipenv
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade pipenv
+#apt install -y python3-pip pipenv
+#python3 -m pip install --upgrade pip
+#python3 -m pip install --upgrade pipenv
 
 # Add Python 3.10
-apt-get install -y software-properties-common
-add-apt-repository -y ppa:deadsnakes/ppa 
-apt-get update
-apt-get install -y python3.10-full
+#apt-get install -y software-properties-common
+#add-apt-repository -y ppa:deadsnakes/ppa 
+#apt-get update
+#apt-get install -y python3.10-full
 
 # Enable firewall and install firewall tool.
 ufw enable
