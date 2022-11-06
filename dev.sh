@@ -35,6 +35,10 @@ snap remove firefox
 
 # Install Docker
 apt-get install -y docker.io
+# Add user to docer group
+# sudo usermod -aG docker $USER
+# Install Docker-Compose
+# apt-get install -y docker-compose
 
 # Install and update system vide Python
 apt-get -y install pipenv
