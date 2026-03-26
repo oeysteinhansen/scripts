@@ -41,9 +41,9 @@ apt-get install -y docker.io
 # apt-get install -y docker-compose
 
 # Install and update system vide Python
-apt-get -y install pipenv
+apt-get -y install python3-pip
 python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade pipenv
+curl -sSL https://pdm-project.org/install-pdm.py | python3 -
 
 # Add Python 3.10 - Default on Ubuntu 22.04 LTS
 #apt-get install -y software-properties-common
