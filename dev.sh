@@ -31,7 +31,7 @@ apt-get install -y ./google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb
 
 # Remove unvanted Snap's
-snap remove firefox
+# snap remove firefox
 
 # Install Docker
 apt-get install -y docker.io
@@ -43,7 +43,7 @@ apt-get install -y docker.io
 # Install and update system vide Python
 apt-get -y install python3-pip
 python3 -m pip install --upgrade pip
-curl -sSL https://pdm-project.org/install-pdm.py | python3 -
+curl -sSL https://pdm-project.org/install.sh | bash
 
 # Add Python 3.10 - Default on Ubuntu 22.04 LTS
 #apt-get install -y software-properties-common
