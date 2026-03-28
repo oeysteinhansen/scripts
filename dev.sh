@@ -8,39 +8,56 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit 2
 fi
 
-# Update Package Repositories
+if [ -z "$SUDO_USER" ]; then
+    echo "This script must be run with sudo."
+    exit 1
+fi
+
+echo "* "
+echo "* Update Package Repositories"
+echo "* "
 apt-get update
 
-## Installing initial packages
+
+echo "* "
+echo "* Install common development tools"
+echo "* "
 apt-get install -y curl wget dialog git zsh
 
-# Update Snap's
+echo "* "
+echo "* Update Snap Store"
+echo "* "
 snap refresh
 
-# Install development Snap's
+
+echo "* "
+echo "* Install common development tools from Snap Store"
+echo "* "
 snap install google-cloud-sdk --classic
 snap install postman
 snap install brave
 snap install gimp
 snap install node --classic
 
-echo *
-echo * Install VSCode
-echo *
+echo "* "
+echo "* Install VSCode"
+echo "* "
 snap install code --classic
 
-echo *
-echo * Install VSCode Extention - Python
-echo *
+echo "* "
+echo "* Install VSCode Extention - Python"
+echo "* "
 code --install-extension ms-python.python
 
-echo *
-echo * Install VSCode Extention - Git.Graph
-echo *
+echo "* "
+echo "* Install VSCode Extention - Git.Graph"
+echo "* "
 code --install-extension mhutchie.git-graph
 
 
-# Install Google Crome
+echo "* "
+echo "* Install Google Chrome"
+echo "* "
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt-get install -y ./google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb
@@ -48,24 +65,35 @@ rm ./google-chrome-stable_current_amd64.deb
 # Remove unvanted Snap's
 # snap remove firefox
 
-# Install Docker
+echo "* "
+echo "* Install Docker"
+echo "* "
 apt-get install -y docker.io
-# Add user to docer group
-# sudo usermod -aG docker $USER
-# Install Docker-Compose
-# apt-get install -y docker-compose
+echo "* "
+echo "* Docker - Add USER to docker group"
+echo "* "
+usermod -aG docker $SUDO_USER
 
-# Install and update system vide Python
+echo "* "
+echo "* Install Docker-Compose"
+echo "* "
+apt-get install -y docker-compose
+
+
+echo "* "
+echo "* Install and update system wide Python"
+echo "* "
 apt-get -y install python3-pip
 python3 -m pip install --upgrade pip
+
+echo "* "
+echo "* Install PDM (Python Development Master)"
+echo "* "
 curl -sSL https://pdm-project.org/install.sh | bash
 
-# Add Python 3.10 - Default on Ubuntu 22.04 LTS
-#apt-get install -y software-properties-common
-#add-apt-repository -y ppa:deadsnakes/ppa 
-#apt-get update
-#apt-get install -y python3.10-full
 
-# Enable firewall and install firewall tool.
+echo "* "
+echo "* Enable firewall and install firewall tool"
+echo "* "
 ufw enable
 apt-get install -y gufw
