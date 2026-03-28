@@ -18,12 +18,27 @@ apt-get install -y curl wget dialog git zsh
 snap refresh
 
 # Install development Snap's
-snap install code --classic
 snap install google-cloud-sdk --classic
 snap install postman
 snap install brave
 snap install gimp
 snap install node --classic
+
+echo *
+echo * Install VSCode
+echo *
+snap install code --classic
+
+echo *
+echo * Install VSCode Extention - Python
+echo *
+code --install-extension ms-python.python
+
+echo *
+echo * Install VSCode Extention - Git.Graph
+echo *
+code --install-extension mhutchie.git-graph
+
 
 # Install Google Crome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
